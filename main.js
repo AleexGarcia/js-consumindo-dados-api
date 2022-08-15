@@ -12,6 +12,8 @@ async function buscaEndereco(cep) {
     }
 }
 
+var cep = document.querySelector('#cep');
+cep.addEventListener('focusout', () => buscaEndereco(cep.value));
 
 // var consultaCEP = fetch('https://viacep.com.br/ws/01001000/json/')
 //     .then(resposta => resposta.json()) //entao converta p/ JSON
